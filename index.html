@@ -1,1042 +1,961 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Jai Shree Shyam | Security & Mobility Hub</title>
-  <!-- Google Fonts & Font Awesome -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #fefefe;
-      color: #111827;
-      scroll-behavior: smooth;
-      line-height: 1.5;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 48px;
-    }
-
-    /* header / nav - FULLY RESPONSIVE */
-    .navbar {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #eef2f6;
-    }
-
-    .nav-flex {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 20px 0;
-      position: relative;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #0B2F5F, #1E4A76);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.02em;
-      position: relative;
-      display: inline-block;
-      z-index: 101;
-    }
-
-    .logo span {
-      background: linear-gradient(135deg, #E65C1E, #F59E0B);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    /* Desktop Navigation */
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .nav-links li {
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #1f2937;
-      transition: 0.25s;
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 8px 0;
-      position: relative;
-      display: inline-block;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #E65C1E;
-      transition: width 0.25s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-links a:hover {
-      color: #E65C1E;
-    }
-
-    /* Mobile Menu Button */
-    .menu-btn {
-      display: none;
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #0B2F5F;
-      padding: 8px;
-      transition: 0.2s;
-      z-index: 101;
-    }
-
-    .menu-btn:hover {
-      color: #E65C1E;
-    }
-
-    /* Mobile Menu Overlay */
-    @media (max-width: 860px) {
-      .container {
-        padding: 0 24px;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 75%;
-        max-width: 320px;
-        height: 100vh;
-        background: white;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        padding: 2rem;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease-in-out;
-        z-index: 1000;
-        display: flex;
-      }
-
-      .nav-links.show {
-        right: 0;
-      }
-
-      .nav-links a {
-        font-size: 1.2rem;
-        padding: 12px 0;
-        width: 100%;
-        text-align: center;
-      }
-
-      .nav-links a::after {
-        bottom: 4px;
-      }
-
-      /* Overlay background when menu is open */
-      body.menu-open::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-        backdrop-filter: blur(3px);
-      }
-
-      /* Close button inside mobile menu */
-      .nav-links .close-menu {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: #1f2937;
-        background: none;
-        border: none;
-        display: block;
-      }
-
-      .nav-links .close-menu:hover {
-        color: #E65C1E;
-      }
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 90px 0 80px;
-      background: linear-gradient(145deg, #FFFFFF 0%, #F5F9FF 100%);
-    }
-
-    .hero-grid {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 52px;
-    }
-
-    .hero-text {
-      flex: 1.2;
-    }
-
-    .hero-text h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      background: linear-gradient(to right, #0B2F5F, #1E4A76);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 24px;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      color: #4b5563;
-      max-width: 550px;
-      margin-bottom: 36px;
-    }
-
-    .hero-btn {
-      background: #E65C1E;
-      color: white;
-      padding: 14px 38px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0 8px 20px rgba(230, 92, 30, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .hero-btn:hover {
-      background: #c24a15;
-      transform: translateY(-3px);
-    }
-
-    .hero-stats {
-      flex: 0.8;
-      background: white;
-      border-radius: 48px;
-      padding: 32px 36px;
-      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.1);
-      border: 1px solid #edf2f7;
-    }
-
-    .stat-item {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 32px;
-    }
-
-    .stat-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .stat-icon {
-      font-size: 2.3rem;
-      color: #E65C1E;
-    }
-
-    .stat-info h3 {
-      font-size: 1.8rem;
-      font-weight: 800;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.4rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      color: #111827;
-    }
-
-    .section-sub {
-      text-align: center;
-      color: #5b6e8c;
-      max-width: 700px;
-      margin: 0 auto 56px auto;
-      font-size: 1.1rem;
-    }
-
-    /* business cards grid */
-    .businesses {
-      padding: 90px 0;
-      background: #ffffff;
-    }
-
-    .biz-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-    }
-
-    .biz-card {
-      background: #ffffff;
-      border-radius: 48px;
-      padding: 36px 32px;
-      flex: 1 1 380px;
-      max-width: 520px;
-      transition: all 0.3s ease;
-      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
-      border: 1px solid #eef2fa;
-      text-align: left;
-    }
-
-    .biz-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 30px 45px -18px rgba(0, 0, 0, 0.15);
-      border-color: #ffe0cc;
-    }
-
-    .biz-header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-
-    .biz-icon {
-      font-size: 3rem;
-      background: #FEF3E8;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 28px;
-      color: #E65C1E;
-    }
-
-    .biz-header h2 {
-      font-size: 1.9rem;
-      font-weight: 800;
-      margin: 0;
-    }
-
-    .service-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 20px 0;
-    }
-
-    .tag {
-      background: #F1F5F9;
-      padding: 6px 16px;
-      border-radius: 50px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #1E293B;
-    }
-
-    .biz-desc {
-      color: #475569;
-      margin: 16px 0;
-      line-height: 1.5;
-    }
-
-    .biz-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: #0B2F5F;
-      color: white;
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      margin-top: 20px;
-      transition: 0.25s;
-      font-size: 0.95rem;
-    }
-
-    .biz-link i {
-      transition: transform 0.2s;
-    }
-
-    .biz-link:hover {
-      background: #E65C1E;
-      transform: scale(1.02);
-    }
-
-    .biz-link:hover i {
-      transform: translateX(6px);
-    }
-
-    /* features row */
-    .features-showcase {
-      background: #F9FAFD;
-      padding: 80px 0;
-    }
-
-    .features-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 32px;
-      justify-content: center;
-    }
-
-    .feature-item {
-      background: white;
-      border-radius: 28px;
-      padding: 32px 28px;
-      flex: 1 1 220px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
-      border: 1px solid #eef2f8;
-    }
-
-    .feature-item i {
-      font-size: 2.2rem;
-      color: #E65C1E;
-      margin-bottom: 18px;
-    }
-
-    .feature-item h4 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-
-    /* about + synergy */
-    .about-why {
-      padding: 90px 0;
-      background: white;
-    }
-
-    .two-col {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-text {
-      flex: 1;
-    }
-
-    .about-text h2 {
-      font-size: 2.3rem;
-      margin-bottom: 24px;
-      font-weight: 800;
-    }
-
-    .about-list {
-      list-style: none;
-      margin-top: 24px;
-    }
-
-    .about-list li {
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .about-list i {
-      color: #E65C1E;
-    }
-
-    .about-img {
-      flex: 1;
-      background: linear-gradient(145deg, #eef2ff, #ffffff);
-      border-radius: 48px;
-      padding: 56px 40px;
-      text-align: center;
-    }
-
-    .about-img i {
-      font-size: 5rem;
-      color: #E65C1E;
-      opacity: 0.9;
-    }
-
-    /* contact section */
-    .contact-section {
-      padding: 90px 0;
-      background: #F8FAFE;
-    }
-
-    .contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      background: white;
-      border-radius: 56px;
-      box-shadow: 0 25px 45px -15px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-    }
-
-    .contact-info {
-      flex: 1;
-      background: linear-gradient(135deg, #0B2F5F, #1E4A76);
-      padding: 56px 48px;
-      color: white;
-    }
-
-    .contact-info h3 {
-      font-size: 2rem;
-      margin-bottom: 24px;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 28px;
-    }
-
-    .social-contact {
-      margin-top: 40px;
-      display: flex;
-      gap: 18px;
-    }
-
-    .social-contact a {
-      color: white;
-      background: rgba(255, 255, 255, 0.12);
-      width: 46px;
-      height: 46px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50px;
-      transition: 0.25s;
-    }
-
-    .social-contact a:hover {
-      background: #E65C1E;
-    }
-
-    .contact-form {
-      flex: 1;
-      padding: 56px 48px;
-      background: white;
-    }
-
-    .contact-form h3 {
-      font-size: 2rem;
-      margin-bottom: 32px;
-      font-weight: 700;
-    }
-
-    .input-group input,
-    .input-group textarea {
-      width: 100%;
-      padding: 15px 22px;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 40px;
-      font-family: 'Inter', sans-serif;
-      margin-bottom: 20px;
-      transition: 0.2s;
-    }
-
-    .input-group input:focus,
-    .input-group textarea:focus {
-      outline: none;
-      border-color: #E65C1E;
-    }
-
-    .submit-btn {
-      background: #E65C1E;
-      border: none;
-      color: white;
-      padding: 15px 38px;
-      border-radius: 50px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* footer */
-    footer {
-      background: #0F172A;
-      color: #CBD5E1;
-      padding: 64px 0 36px;
-    }
-
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 48px;
-      margin-bottom: 52px;
-    }
-
-    .footer-col {
-      flex: 1;
-      min-width: 180px;
-    }
-
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 22px;
-      font-weight: 600;
-      position: relative;
-    }
-
-    .footer-col h4::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: #E65C1E;
-    }
-
-    .footer-col a {
-      color: #94A3B8;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .footer-col a:hover {
-      color: #F59E0B;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid #1e293b;
-      padding-top: 36px;
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 860px) {
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-      .hero-grid {
-        flex-direction: column;
-      }
-      .biz-card {
-        max-width: 100%;
-      }
-      .contact-wrapper {
-        flex-direction: column;
-      }
-      .section-title {
-        font-size: 2rem;
-      }
-      .logo {
-        font-size: 1.6rem;
-      }
-    }
-
-    @media (max-width: 550px) {
-      .container {
-        padding: 0 20px;
-      }
-      .hero-text h1 {
-        font-size: 2rem;
-      }
-      .section-title {
-        font-size: 1.6rem;
-      }
-      .biz-header h2 {
-        font-size: 1.4rem;
-      }
-      .biz-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-      }
-      .hero-stats {
-        padding: 24px 20px;
-      }
-      .stat-info h3 {
-        font-size: 1.4rem;
-      }
-      .footer-grid {
-        flex-direction: column;
-        text-align: center;
-      }
-      .footer-col h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      .social-icons {
-        justify-content: center;
-      }
-      .contact-info, .contact-form {
-        padding: 36px 24px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Jai Shree Shyam | Security & Mobility Hub</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefefe;
+            color: #111827;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        /* Container with responsive side spacing */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* header / nav - REDUCED HEIGHT */
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .nav-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 12px 0;  /* Reduced from 24px to 12px */
+        }
+
+        .logo {
+            font-size: 1.8rem;  /* Slightly reduced from 2rem */
+            font-weight: 800;
+            background: linear-gradient(135deg, #1E2A5E, #3B4B77);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            position: relative;
+            padding: 4px 0;  /* Reduced padding */
+            display: inline-block;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, #E65C1E, #F59E0B);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #E65C1E, #F59E0B);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .logo:hover::after {
+            width: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;  /* Slightly reduced gap */
+            list-style: none;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1f2937;
+            transition: 0.25s;
+            font-size: 0.95rem;  /* Slightly smaller font */
+            font-weight: 500;
+            padding: 6px 0;  /* Reduced padding */
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #E65C1E;
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #E65C1E;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 1.6rem;  /* Slightly reduced */
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1E2A5E;
+            padding: 6px;
+            transition: 0.2s;
+        }
+
+        .menu-btn:hover {
+            color: #E65C1E;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 70px;  /* Slightly reduced top padding */
+            background: linear-gradient(145deg, #FFFFFF 0%, #F9FAFE 100%);
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 52px;
+        }
+
+        .hero-text {
+            flex: 1.2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #1E2A5E, #3B4B77);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            max-width: 550px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .hero-btn {
+            background: #E65C1E;
+            color: white;
+            padding: 12px 34px;  /* Slightly reduced */
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 20px rgba(230, 92, 30, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #c24a15;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(230, 92, 30, 0.35);
+        }
+
+        .hero-stats {
+            flex: 0.8;
+            background: white;
+            border-radius: 48px;
+            padding: 28px 32px;  /* Slightly reduced */
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #edf2f7;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .stat-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-icon {
+            font-size: 2rem;  /* Slightly reduced */
+            color: #E65C1E;
+        }
+
+        .stat-info h3 {
+            font-size: 1.6rem;  /* Slightly reduced */
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+
+        .stat-info p {
+            color: #6c757d;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #111827;
+            letter-spacing: -0.01em;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: #5b6e8c;
+            max-width: 700px;
+            margin: 0 auto 48px auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Our integrated verticals section styles */
+        .businesses {
+            padding: 60px 0 70px;
+            background: #ffffff;
+        }
+        .biz-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .biz-card {
+            flex: 1 1 420px;
+            max-width: 520px;
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 36px 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eef2f8;
+        }
+        .biz-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 28px 40px -16px rgba(0, 0, 0, 0.12);
+            border-color: #ffd9c4;
+        }
+        .biz-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .biz-icon {
+            font-size: 2.5rem;
+            background: #FEF3E8;
+            width: 68px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 24px;
+            color: #E65C1E;
+            transition: 0.25s;
+        }
+        .biz-card:hover .biz-icon {
+            background: #E65C1E;
+            color: white;
+            transform: scale(1.02);
+        }
+        .biz-header h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0;
+            background: linear-gradient(135deg, #1E2A5E, #2c3f6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .tag {
+            background: #F8FAFD;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1f2a44;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #edf2f9;
+        }
+        .tag i {
+            color: #E65C1E;
+            font-size: 0.85rem;
+        }
+        .biz-desc {
+            color: #4a5a72;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+        }
+        .biz-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: #E65C1E;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 60px;
+            transition: 0.2s;
+            border: 1.5px solid #ffe0cc;
+            margin-top: 4px;
+            font-size: 0.9rem;
+        }
+        .biz-link i {
+            transition: transform 0.2s;
+            font-size: 0.8rem;
+        }
+        .biz-link:hover {
+            background: #E65C1E;
+            color: white;
+            border-color: #E65C1E;
+            box-shadow: 0 8px 18px rgba(230, 92, 30, 0.2);
+        }
+        .biz-link:hover i {
+            transform: translateX(4px);
+        }
+
+        /* features showcase */
+        .features-showcase {
+            background: #F9FAFD;
+            padding: 70px 0;
+        }
+
+        .features-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .feature-item {
+            background: white;
+            border-radius: 28px;
+            padding: 28px 24px;
+            flex: 1 1 220px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eef2f8;
+            transition: 0.25s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            border-color: #ffe0cc;
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: #E65C1E;
+            margin-bottom: 16px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            color: #5a687c;
+        }
+
+        /* about section */
+        .about-why {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .two-col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #2d3a4b;
+            line-height: 1.6;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .about-list i {
+            color: #E65C1E;
+            font-size: 1.1rem;
+        }
+
+        .about-img {
+            flex: 1;
+            background: linear-gradient(145deg, #f5e6de, #ffffff);
+            border-radius: 48px;
+            padding: 48px 36px;
+            text-align: center;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-img i {
+            font-size: 4.5rem;
+            color: #c2410c;
+            opacity: 0.9;
+        }
+
+        .about-img h3 {
+            margin-top: 24px;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: #F8FAFE;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            background: white;
+            border-radius: 56px;
+            box-shadow: 0 25px 45px -15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #eef2fa;
+        }
+
+        .contact-info {
+            flex: 1;
+            background: linear-gradient(135deg, #1E2A5E, #2A3F6E);
+            padding: 48px 44px;
+            color: white;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .contact-detail i {
+            font-size: 1.3rem;
+            width: 28px;
+        }
+
+        .social-contact {
+            margin-top: 36px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-contact a {
+            color: white;
+            background: rgba(255, 255, 255, 0.12);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            transition: 0.25s;
+            font-size: 1.2rem;
+        }
+
+        .social-contact a:hover {
+            background: #E65C1E;
+            transform: translateY(-4px);
+        }
+
+        .contact-form {
+            flex: 1;
+            padding: 48px 44px;
+            background: white;
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 28px;
+            color: #111;
+            font-weight: 700;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px 20px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 40px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            background: #fff;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: #E65C1E;
+            box-shadow: 0 0 0 4px rgba(230, 92, 30, 0.08);
+        }
+
+        .submit-btn {
+            background: #E65C1E;
+            border: none;
+            color: white;
+            padding: 12px 34px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 0.95rem;
+        }
+
+        .submit-btn:hover {
+            background: #c24a15;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230, 92, 30, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0F172A;
+            color: #CBD5E1;
+            padding: 56px 0 32px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: #E65C1E;
+            border-radius: 2px;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: #94A3B8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: 0.2s;
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: #F59E0B;
+            transform: translateX(5px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 14px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            background: rgba(255, 255, 255, 0.08);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.25s;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .social-icons a:hover {
+            background: #E65C1E;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            padding-top: 32px;
+            font-size: 0.8rem;
+            color: #7e8aa2;
+        }
+
+        /* ===== RESPONSIVE NAV: CENTER LINKS ON MOBILE ===== */
+        @media (max-width: 860px) {
+            .container {
+                padding: 0 32px;
+            }
+            .nav-flex {
+                padding: 10px 0;
+            }
+            .logo {
+                font-size: 1.6rem;
+            }
+            .menu-btn {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1.2rem;
+                padding: 20px 0 16px;
+                margin-top: 8px;
+                background: rgba(255, 255, 255, 0.98);
+                border-radius: 28px;
+                backdrop-filter: blur(8px);
+                box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+                text-align: center;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links a {
+                display: inline-block;
+                padding: 8px 0;
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .hero-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .contact-wrapper {
+                flex-direction: column;
+                border-radius: 40px;
+            }
+            .contact-info {
+                border-radius: 40px 40px 0 0;
+                padding: 40px 32px;
+            }
+            .contact-form {
+                padding: 40px 32px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                padding: 0 24px;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-btn,
+            .cta-btn {
+                padding: 10px 24px;
+            }
+            .biz-card {
+                padding: 28px 22px;
+                max-width: 100%;
+            }
+            .biz-header h2 {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .contact-info,
+            .contact-form {
+                padding: 32px 24px;
+            }
+            .nav-links {
+                gap: 1rem;
+                padding: 18px 0 14px;
+            }
+            .nav-links a {
+                font-size: 1rem;
+            }
+            .hero {
+                padding: 60px 0 50px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .container {
+                padding: 0 80px;
+            }
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<header class="navbar">
-  <div class="container nav-flex">
-    <div class="logo">JaiShree<span>Shyam</span></div>
-    <button class="menu-btn" id="menuToggle" aria-label="Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#businesses">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact-section">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
-<main>
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Security. Comfort. Mobility.<br>One trusted hub.</h1>
-        <p>Your complete solution for home & business protection, electrical, plumbing, and premium car rentals. Two powerful businesses, one seamless experience.</p>
-        <a href="#businesses" class="hero-btn">Explore Our Services <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
-          <div class="stat-info"><h3>500+</h3><p>Installations & repairs</p></div>
+    <header class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">JaiShree<span>Shyam</span></div>
+            <button class="menu-btn" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#businesses">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
         </div>
-        <div class="stat-item">
-          <div class="stat-icon"><i class="fas fa-car"></i></div>
-          <div class="stat-info"><h3>120+</h3><p>Fleet vehicles available</p></div>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Security. Comfort. Mobility.<br>One trusted hub.</h1>
+                    <p>Your complete solution for home & business protection, electrical, plumbing, and premium car rentals. Two powerful businesses, one seamless experience.</p>
+                    <a href="#businesses" class="hero-btn">Explore Our Services <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><div class="stat-icon"><i class="fas fa-shield-alt"></i></div><div class="stat-info"><h3>500+</h3><p>Installations & repairs</p></div></div>
+                    <div class="stat-item"><div class="stat-icon"><i class="fas fa-car"></i></div><div class="stat-info"><h3>120+</h3><p>Fleet vehicles available</p></div></div>
+                    <div class="stat-item"><div class="stat-icon"><i class="fas fa-clock"></i></div><div class="stat-info"><h3>24/7</h3><p>Emergency support</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="businesses" class="businesses">
+            <div class="container">
+                <h2 class="section-title">Our integrated verticals</h2>
+                <p class="section-sub">Each business runs on its own dedicated website with specialized tools. Click to visit the full platform.</p>
+                <div class="biz-grid">
+                    <div class="biz-card">
+                        <div class="biz-header">
+                            <div class="biz-icon"><i class="fa-solid fa-shield"></i></div>
+                            <h2>JSS Security</h2>
+                        </div>
+                        <div class="service-tags">
+                            <span class="tag"><i class="fas fa-video"></i> CCTV Cameras</span>
+                            <span class="tag"><i class="fas fa-bolt"></i> Electrician</span>
+                            <span class="tag"><i class="fas fa-wrench"></i> Plumbing</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 24/7 Service</span>
+                        </div>
+                        <p class="biz-desc">High-definition security systems, licensed electrical repairs, plumbing installation & emergency fixes. We protect your property and ensure smooth operations for homes & offices.</p>
+                        <a href="#" class="biz-link" data-biz="securefix">Visit JSS Security <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="biz-card">
+                        <div class="biz-header">
+                            <div class="biz-icon"><i class="fas fa-car-side"></i></div>
+                            <h2>DriveSwift Rentals</h2>
+                        </div>
+                        <div class="service-tags">
+                            <span class="tag"><i class="fas fa-calendar-alt"></i> Daily/Weekly</span>
+                            <span class="tag"><i class="fas fa-gas-pump"></i> Economy & Luxury</span>
+                            <span class="tag"><i class="fas fa-map-marked-alt"></i> Airport Pickup</span>
+                            <span class="tag"><i class="fas fa-shield-alt"></i> Full Insurance</span>
+                        </div>
+                        <p class="biz-desc">Affordable self-drive and chauffeur cars, from sedans to SUVs. Transparent pricing, free cancellation, and 24/7 roadside assistance. Perfect for business trips or family vacations.</p>
+                        <a href="#" class="biz-link" data-biz="driveswift">Visit DriveSwift Website <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="features-showcase">
+            <div class="container">
+                <h2 class="section-title" style="font-size: 2rem;">Why combine both businesses?</h2>
+                <p class="section-sub">One hub, two specialized platforms — saving time, unified support, cross benefits.</p>
+                <div class="features-flex">
+                    <div class="feature-item"><i class="fas fa-handshake"></i><h4>Single Contact</h4><p>Call or chat for security, repairs, or car rental.</p></div>
+                    <div class="feature-item"><i class="fas fa-credit-card"></i><h4>Unified Billing</h4><p>Consolidated invoices & loyalty perks.</p></div>
+                    <div class="feature-item"><i class="fas fa-tools"></i><h4>Trusted Professionals</h4><p>Licensed electricians, plumbers, certified fleet.</p></div>
+                    <div class="feature-item"><i class="fas fa-rocket"></i><h4>Fast Response</h4><p>Emergency repairs + last-minute car booking.</p></div>
+                </div>
+            </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-icon"><i class="fas fa-clock"></i></div>
-          <div class="stat-info"><h3>24/7</h3><p>Emergency support</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- TWO BUSINESSES SHOWCASE (dedicated website links) -->
-  <section id="businesses" class="businesses">
-    <div class="container">
-      <h2 class="section-title">Our integrated verticals</h2>
-      <p class="section-sub">Each business runs on its own dedicated website with specialized tools. Click to visit the full platform.</p>
-      <div class="biz-grid">
-        <!-- BUSINESS 1: CCTV, Electrician, Plumbing -->
-        <div class="biz-card" id="biz-security">
-          <div class="biz-header">
-            <div class="biz-icon"><i class="fa-solid fa-shield"></i></i></div>
-            <h2>JSS Security</h2>
-          </div>
-          <div class="service-tags">
-            <span class="tag"><i class="fas fa-video"></i> CCTV Cameras</span>
-            <span class="tag"><i class="fas fa-bolt"></i> Electrician</span>
-            <span class="tag"><i class="fas fa-wrench"></i> Plumbing</span>
-            <span class="tag"><i class="fas fa-home"></i> 24/7 Service</span>
-          </div>
-          <p class="biz-desc">High-definition security systems, licensed electrical repairs, plumbing installation & emergency fixes. We protect your property and ensure smooth operations for homes & offices.</p>
-          <a href="#" class="biz-link" data-biz="securefix">Visit JSS Security <i class="fas fa-external-link-alt"></i></a>
-        </div>
+        <section id="about" class="about-why">
+            <div class="container two-col">
+                <div class="about-text">
+                    <h2>Your daily operations & travels, covered.</h2>
+                    <p>JSS Security provides cutting-edge surveillance, electrical safety, and plumbing solutions that give you peace of mind. Meanwhile, DriveSwift Rentals puts you behind the wheel of a perfectly maintained vehicle for any journey.</p>
+                    <ul class="about-list"><li><i class="fas fa-check-circle"></i> Dedicated websites with instant booking / service requests</li><li><i class="fas fa-check-circle"></i> 10+ years combined experience in security & mobility</li><li><i class="fas fa-check-circle"></i> 24/7 customer support & emergency response</li><li><i class="fas fa-check-circle"></i> Fleet tracking & remote CCTV monitoring available</li></ul>
+                </div>
+                <div class="about-img"><i class="fas fa-charging-station"></i><h3>Integrated service ecosystem</h3><p style="color:#5c6f87; margin-top: 8px;">From secure premises to smooth rides</p></div>
+            </div>
+        </section>
 
-        <!-- BUSINESS 2: Rental Car -->
-        <div class="biz-card" id="biz-rental">
-          <div class="biz-header">
-            <div class="biz-icon"><i class="fas fa-car-side"></i></div>
-            <h2>DriveSwift Rentals</h2>
-          </div>
-          <div class="service-tags">
-            <span class="tag"><i class="fas fa-calendar-alt"></i> Daily/Weekly</span>
-            <span class="tag"><i class="fas fa-gas-pump"></i> Economy & Luxury</span>
-            <span class="tag"><i class="fas fa-map-marked-alt"></i> Airport Pickup</span>
-            <span class="tag"><i class="fas fa-shield-alt"></i> Full Insurance</span>
-          </div>
-          <p class="biz-desc">Affordable self-drive and chauffeur cars, from sedans to SUVs. Transparent pricing, free cancellation, and 24/7 roadside assistance. Perfect for business trips or family vacations.</p>
-          <a href="#" class="biz-link" data-biz="driveswift">Visit DriveSwift Website <i class="fas fa-external-link-alt"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section id="contact-section" class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info"><h3>Get in touch</h3><p style="margin-bottom: 28px; opacity:0.9">Reach out for a free quote, emergency service, or car rental inquiry.</p><div class="contact-detail"><i class="fas fa-map-marker-alt"></i><span>Sardarshahar, Churu, Rajasthan</span></div><div class="contact-detail"><i class="fas fa-phone-alt"></i><span>+91 62 842 10698</span></div><div class="contact-detail"><i class="fas fa-envelope"></i><span>kprajapat5001@gmail.com</span></div><div class="social-contact"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+                    <div class="contact-form"><h3>Message us</h3><form id="contactForm"><div class="input-group"><input type="text" placeholder="Full Name" required></div><div class="input-group"><input type="email" placeholder="Email Address" required></div><div class="input-group"><input type="text" placeholder="Phone Number"></div><div class="input-group"><textarea rows="3" placeholder="Tell us about your needs: CCTV installation, electrical, plumbing, or car rental?"></textarea></div><button type="submit" class="submit-btn">Send inquiry <i class="fas fa-paper-plane"></i></button></form><p id="formFeedback" style="margin-top: 16px; font-size: 0.8rem; color: #E65C1E;"></p></div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Why choose combined platform -->
-  <div class="features-showcase">
-    <div class="container">
-      <h2 class="section-title" style="font-size: 2rem;">Why combine both businesses?</h2>
-      <p class="section-sub">One hub, two specialized platforms — saving time, unified support, cross benefits.</p>
-      <div class="features-flex">
-        <div class="feature-item"><i class="fas fa-handshake"></i><h4>Single Contact</h4><p>Call or chat for security, repairs, or car rental.</p></div>
-        <div class="feature-item"><i class="fas fa-credit-card"></i><h4>Unified Billing</h4><p>Consolidated invoices & loyalty perks across services.</p></div>
-        <div class="feature-item"><i class="fas fa-tools"></i><h4>Trusted Professionals</h4><p>Licensed electricians, plumbers, certified car fleet.</p></div>
-        <div class="feature-item"><i class="fas fa-rocket"></i><h4>Fast Response</h4><p>Emergency repairs + last-minute car booking.</p></div>
-      </div>
-    </div>
-  </div>
+        <div class="container"><div style="background: linear-gradient(115deg, #0B2F5F, #1E4A76); padding: 55px 0; text-align: center; color: white; border-radius: 56px; margin: 30px auto 60px;"><h2 style="font-size: 1.8rem; margin-bottom: 16px;">Need both security & a rental car?</h2><p style="margin-bottom: 28px;">Get exclusive combo offers when you use our integrated services.</p><a href="#contact-section" class="cta-btn" style="background: #FF8C42; padding: 12px 38px; border-radius: 50px; color: white; text-decoration: none; font-weight: bold;">Request bundled quote →</a></div></div>
 
-  <!-- About + synergy Section -->
-  <section id="about" class="about-why">
-    <div class="container two-col">
-      <div class="about-text">
-        <h2>Your daily operations & travels, covered.</h2>
-        <p>JSS Security provides cutting-edge surveillance, electrical safety, and plumbing solutions that give you peace of mind. Meanwhile, DriveSwift Rentals puts you behind the wheel of a perfectly maintained vehicle for any journey. Two expert teams, one streamlined platform.</p>
-        <ul class="about-list">
-          <li><i class="fas fa-check-circle"></i> Dedicated websites with instant booking / service requests</li>
-          <li><i class="fas fa-check-circle"></i> 10+ years combined experience in security & mobility</li>
-          <li><i class="fas fa-check-circle"></i> 24/7 customer support & emergency response</li>
-          <li><i class="fas fa-check-circle"></i> Fleet tracking & remote CCTV monitoring available</li>
-        </ul>
-      </div>
-      <div class="about-img">
-        <i class="fas fa-charging-station"></i>
-        <h3 style="margin-top: 28px;">Integrated service ecosystem</h3>
-        <p style="color:#5c6f87;">From secure premises to smooth rides</p>
-      </div>
-    </div>
-  </section>
+        <footer><div class="container"><div class="footer-grid"><div class="footer-col"><h4>Jai Shree Shyam</h4><p>Two businesses, one reliable gateway: CCTV & electrical/plumbing + premium car rentals.</p><p style="margin-top: 10px;"><i class="fas fa-envelope"></i> kprajapat5001@gmail.com</p><p><i class="fas fa-phone-alt"></i> +91 62 842 10698</p></div><div class="footer-col"><h4>Quick Links</h4><a href="#home">Home</a><a href="#businesses">Services</a><a href="#about">About</a><a href="#contact-section">Contact</a></div><div class="footer-col"><h4>Specialized Websites</h4><a href="#" data-biz="securefix">JSS Security (CCTV/Electric/Plumbing)</a><a href="#" data-biz="driveswift">DriveSwift Rentals (Car Hire)</a></div><div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div><p style="margin-top: 20px;"><i class="fas fa-map-marker-alt"></i> Sardarshahar, Churu, Rajasthan</p></div></div><div class="footer-bottom"><p>© 2025 Jai Shree Shyam — Integrated Security & Mobility. Each business runs its own dedicated platform.</p></div></div></footer>
+    </main>
 
-  <!-- Contact Section -->
-  <section id="contact-section" class="contact-section">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h3>Get in touch</h3>
-          <p style="margin-bottom: 32px; opacity:0.9">Reach out for a free quote, emergency service, or car rental inquiry.</p>
-          <div class="contact-detail"><i class="fas fa-map-marker-alt"></i><span>Sardarshahar, Churu, Rajasthan</span></div>
-          <div class="contact-detail"><i class="fas fa-phone-alt"></i><span>+91 62 842 10698</span></div>
-          <div class="contact-detail"><i class="fas fa-envelope"></i><span>kprajapat5001@gmail.com</span></div>
-          <div class="social-contact"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div>
-        </div>
-        <div class="contact-form">
-          <h3>Message us</h3>
-          <form id="contactForm">
-            <div class="input-group"><input type="text" placeholder="Full Name" required></div>
-            <div class="input-group"><input type="email" placeholder="Email Address" required></div>
-            <div class="input-group"><input type="text" placeholder="Phone Number"></div>
-            <div class="input-group"><textarea rows="3" placeholder="Tell us about your needs: CCTV installation, electrical, plumbing, or car rental?"></textarea></div>
-            <button type="submit" class="submit-btn">Send inquiry <i class="fas fa-paper-plane"></i></button>
-          </form>
-          <p id="formFeedback" style="margin-top: 18px; font-size: 0.85rem; color: #E65C1E;"></p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Modal -->
+    <div id="demoModal" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); align-items: center; justify-content: center; z-index: 1000;"><div style="background: white; max-width: 400px; margin: 20px; border-radius: 40px; padding: 28px 24px; text-align: center;"><i class="fas fa-globe" style="font-size: 2.8rem; color: #E65C1E; margin-bottom: 14px;"></i><h3 id="modalTitle" style="margin-bottom: 10px;">Business Website</h3><p id="modalDesc" style="margin-bottom: 22px; color:#2c3e50;">You will be redirected to the dedicated service platform.</p><div style="display: flex; gap: 14px; justify-content: center;"><button id="modalProceedBtn" style="background:#E65C1E; border:none; padding:10px 26px; border-radius:40px; color:white; font-weight:bold; cursor:pointer;">Continue →</button><button id="modalCloseBtn" style="background:#e2e8f0; border:none; padding:10px 22px; border-radius:40px; cursor:pointer;">Cancel</button></div></div></div>
 
-  <!-- CTA area -->
-  <div class="container">
-    <div style="background: linear-gradient(115deg, #0B2F5F, #1E4A76); padding: 65px 0; text-align: center; color: white; border-radius: 56px; margin: 40px auto 70px;">
-      <h2 style="font-size: 2rem; margin-bottom: 18px;">Need both security & a rental car?</h2>
-      <p style="margin-bottom: 32px;">Get exclusive combo offers when you use our integrated services.</p>
-      <a href="#contact-section" class="cta-btn" style="background: #FF8C42; padding: 14px 42px; border-radius: 50px; color: white; text-decoration: none; font-weight: bold;">Request bundled quote →</a>
-    </div>
-  </div>
+    <script>
+        const businessUrls = { securefix: "https://iamkml007.github.io/jaishreeshyam/jss_security.html", driveswift: "https://driveswiftrentals.demo/car-rental-booking" };
+        let currentBiz = null;
+        const modal = document.getElementById('demoModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const proceedBtn = document.getElementById('modalProceedBtn');
+        const closeModalBtn = document.getElementById('modalCloseBtn');
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Jai Shree Shyam</h4>
-          <p>Two businesses, one reliable gateway: CCTV & electrical/plumbing + premium car rentals.</p>
-          <p style="margin-top: 12px;"><i class="fas fa-envelope"></i> kprajapat5001@gmail.com</p>
-          <p><i class="fas fa-phone-alt"></i> +91 62 842 10698</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <a href="#home">Home</a>
-          <a href="#businesses">Services</a>
-          <a href="#about">About</a>
-          <a href="#contact-section">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Specialized Websites</h4>
-          <a href="#" data-biz="securefix">JSS Security (CCTV/Electric/Plumbing)</a>
-          <a href="#" data-biz="driveswift">DriveSwift Rentals (Car Hire)</a>
-        </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
-          <p style="margin-top: 24px;"><i class="fas fa-map-marker-alt"></i> Sardarshahar, Churu, Rajasthan</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 Jai Shree Shyam — Integrated Security & Mobility. Each business runs its own dedicated platform.</p>
-      </div>
-    </div>
-  </footer>
-</main>
+        function showModal(bizKey, friendlyName, extraInfo) {
+            if (!businessUrls[bizKey]) return;
+            currentBiz = bizKey;
+            modalTitle.innerText = friendlyName;
+            modalDesc.innerText = extraInfo + " This dedicated website offers full functionality: booking, service requests, catalog, and more.";
+            modal.style.display = 'flex';
+        }
+        function closeModal() { modal.style.display = 'none'; currentBiz = null; }
+        function redirectToBusiness() { if (currentBiz && businessUrls[currentBiz]) { window.open(businessUrls[currentBiz], '_blank'); closeModal(); } }
 
-<!-- Modal for external website simulation -->
-<div id="demoModal" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); align-items: center; justify-content: center; z-index: 1000;">
-  <div style="background: white; max-width: 420px; margin: 20px; border-radius: 40px; padding: 32px 28px; text-align: center;">
-    <i class="fas fa-globe" style="font-size: 3rem; color: #E65C1E; margin-bottom: 16px;"></i>
-    <h3 id="modalTitle" style="margin-bottom: 12px;">Business Website</h3>
-    <p id="modalDesc" style="margin-bottom: 24px; color:#2c3e50;">You will be redirected to the dedicated service platform.</p>
-    <div style="display: flex; gap: 16px; justify-content: center;">
-      <button id="modalProceedBtn" style="background:#E65C1E; border:none; padding:12px 28px; border-radius:40px; color:white; font-weight:bold; cursor:pointer;">Continue →</button>
-      <button id="modalCloseBtn" style="background:#e2e8f0; border:none; padding:12px 24px; border-radius:40px; cursor:pointer;">Cancel</button>
-    </div>
-  </div>
-</div>
+        document.querySelectorAll('[data-biz]').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const biz = trigger.getAttribute('data-biz');
+                if (biz === 'securefix') showModal('securefix', 'JSS Security', 'CCTV cameras, licensed electricians, plumbing repairs & 24/7 emergency support.');
+                else if (biz === 'driveswift') showModal('driveswift', 'DriveSwift Rentals', 'Book self-drive or chauffeur cars, from economy to luxury. Free cancellation & roadside assistance.');
+            });
+        });
+        proceedBtn.addEventListener('click', redirectToBusiness);
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-<script>
-  // dedicated website URLs (replace with actual domains when ready)
-  const businessUrls = {
-    securefix: "https://iamkml007.github.io/jaishreeshyam/jss_security.html",
-    driveswift: "https://iamkml007.github.io/jaishreeshyam/jss_rental.html"
-  };
-  let currentBiz = null;
-  const modal = document.getElementById('demoModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDesc = document.getElementById('modalDesc');
-  const proceedBtn = document.getElementById('modalProceedBtn');
-  const closeModalBtn = document.getElementById('modalCloseBtn');
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        function closeMenu() { navLinks.classList.remove('show'); document.body.classList.remove('menu-open'); }
+        function openMenu() { navLinks.classList.add('show'); document.body.classList.add('menu-open'); }
+        if (menuToggle) menuToggle.addEventListener('click', (e) => { e.stopPropagation(); navLinks.classList.contains('show') ? closeMenu() : openMenu(); });
+        document.body.addEventListener('click', (e) => { if (navLinks.classList.contains('show') && !navLinks.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) closeMenu(); });
+        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => closeMenu()));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && navLinks.classList.contains('show')) closeMenu(); });
 
-  function showModal(bizKey, friendlyName, extraInfo) {
-    if (!businessUrls[bizKey]) return;
-    currentBiz = bizKey;
-    modalTitle.innerText = friendlyName;
-    modalDesc.innerText = extraInfo + " This dedicated website offers full functionality: booking, service requests, catalog, and more.";
-    modal.style.display = 'flex';
-  }
-  function closeModal() { modal.style.display = 'none'; currentBiz = null; }
-  function redirectToBusiness() {
-    if (currentBiz && businessUrls[currentBiz]) {
-      window.open(businessUrls[currentBiz], '_blank');
-      closeModal();
-    }
-  }
-
-  document.querySelectorAll('[data-biz]').forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const biz = trigger.getAttribute('data-biz');
-      if (biz === 'securefix') {
-        showModal('securefix', 'JSS Security', 'CCTV cameras, licensed electricians, plumbing repairs & 24/7 emergency support.');
-      } else if (biz === 'driveswift') {
-        showModal('driveswift', 'DriveSwift Rentals', 'Book self-drive or chauffeur cars, from economy to luxury. Free cancellation & roadside assistance.');
-      }
-    });
-  });
-
-  proceedBtn.addEventListener('click', redirectToBusiness);
-  closeModalBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
-  // FULLY RESPONSIVE NAVBAR TOGGLE with overlay and body class
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  
-  function closeMenu() {
-    navLinks.classList.remove('show');
-    document.body.classList.remove('menu-open');
-  }
-  
-  function openMenu() {
-    navLinks.classList.add('show');
-    document.body.classList.add('menu-open');
-  }
-  
-  if(menuToggle) {
-    menuToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if(navLinks.classList.contains('show')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-  }
-  
-  // Close menu when clicking outside (on overlay)
-  document.body.addEventListener('click', (e) => {
-    if(navLinks.classList.contains('show') && !navLinks.contains(e.target) && e.target !== menuToggle && !menuToggle.contains(e.target)) {
-      closeMenu();
-    }
-  });
-  
-  // Close menu when clicking on any nav link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      closeMenu();
-    });
-  });
-  
-  // Close menu on escape key
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && navLinks.classList.contains('show')) {
-      closeMenu();
-    }
-  });
-
-  // contact form feedback
-  const contactForm = document.getElementById('contactForm');
-  const feedback = document.getElementById('formFeedback');
-  if(contactForm){
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      feedback.innerText = "✅ Thank you! We'll reach out within 24 hours about your security / rental needs.";
-      contactForm.reset();
-      setTimeout(() => feedback.innerText = "", 5000);
-    });
-  }
-
-  // smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      const href = this.getAttribute('href');
-      if(href === "#" || href === "") return;
-      const target = document.querySelector(href);
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-</script>
+        const contactForm = document.getElementById('contactForm');
+        const feedback = document.getElementById('formFeedback');
+        if (contactForm) contactForm.addEventListener('submit', (e) => { e.preventDefault(); feedback.innerText = "✅ Thank you! We'll reach out within 24 hours about your security / rental needs."; contactForm.reset(); setTimeout(() => feedback.innerText = "", 5000); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const href = this.getAttribute('href'); if (href === "#" || href === "") return; const target = document.querySelector(href); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); } }); });
+    </script>
 </body>
 </html>
