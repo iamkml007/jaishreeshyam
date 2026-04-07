@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>RedLine Rentals | Premium Car & Bus Fleet – Fully Responsive</title>
+  <title>JSS TOURS & TRAVELS | Premium Car & Bus Fleet – Fully Responsive</title>
   <!-- Google Fonts + Font Awesome 6 -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -47,8 +50,9 @@
       z-index: 1000;
       padding: 14px 0;
       border-bottom: 3px solid var(--red);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
     }
+
     .nav-flex {
       display: flex;
       justify-content: space-between;
@@ -56,12 +60,14 @@
       flex-wrap: wrap;
       gap: 15px;
     }
+
     .logo {
-      font-size: 1.7rem;
+      font-size: 1.2rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       color: var(--red);
     }
+
     .logo span {
       color: var(--white);
     }
@@ -71,6 +77,7 @@
       gap: 28px;
       list-style: none;
     }
+
     .nav-links a {
       text-decoration: none;
       font-weight: 600;
@@ -78,9 +85,11 @@
       transition: 0.2s;
       font-size: 0.95rem;
     }
+
     .nav-links a:hover {
       color: var(--red);
     }
+
     .btn-book-nav {
       background: var(--red);
       border: none;
@@ -92,6 +101,7 @@
       transition: 0.2s;
       font-size: 0.85rem;
     }
+
     .btn-book-nav:hover {
       background: var(--red-dark);
       transform: scale(1.02);
@@ -111,6 +121,7 @@
       .hamburger {
         display: block;
       }
+
       .nav-links {
         position: fixed;
         top: 70px;
@@ -124,17 +135,20 @@
         padding-top: 40px;
         gap: 28px;
         transition: left 0.3s ease-in-out;
-        box-shadow: 2px 0 20px rgba(0,0,0,0.5);
+        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
         z-index: 999;
         border-right: 2px solid var(--red);
       }
+
       .nav-links.active {
         left: 0;
       }
+
       .nav-links a {
         font-size: 1.1rem;
         padding: 8px;
       }
+
       .btn-book-nav {
         margin-left: auto;
       }
@@ -146,6 +160,7 @@
       padding: 70px 0 80px;
       border-bottom: 1px solid #eee;
     }
+
     .hero-grid {
       display: flex;
       flex-wrap: wrap;
@@ -153,27 +168,32 @@
       justify-content: space-between;
       gap: 50px;
     }
+
     .hero-text {
       flex: 1.2;
       min-width: 280px;
     }
+
     .hero-text h1 {
       font-size: 3.2rem;
       font-weight: 800;
       line-height: 1.2;
       color: var(--black);
     }
+
     .hero-text .red-accent {
       color: var(--red);
       border-bottom: 3px solid var(--red);
       display: inline-block;
     }
+
     .hero-text p {
       font-size: 1.05rem;
       color: #2c2c2c;
       margin: 24px 0 32px;
       max-width: 90%;
     }
+
     .hero-btn {
       background: var(--black);
       color: var(--red);
@@ -188,30 +208,35 @@
       align-items: center;
       gap: 8px;
     }
+
     .hero-btn:hover {
       background: var(--red);
       color: var(--white);
       transform: translateY(-2px);
     }
+
     .hero-icons {
       flex: 0.9;
       background: var(--white);
       border-radius: 40px;
       padding: 35px 25px;
       text-align: center;
-      box-shadow: 0 20px 35px -8px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.08);
       border: 1px solid #f0d6d9;
       min-width: 260px;
     }
+
     .hero-icons i {
       font-size: 4.2rem;
       color: var(--red);
       margin: 0 12px;
       transition: transform 0.2s;
     }
+
     .hero-icons i:hover {
       transform: scale(1.05);
     }
+
     .hero-icons p {
       margin-top: 20px;
       font-weight: 600;
@@ -226,38 +251,47 @@
         text-align: center;
         gap: 35px;
       }
+
       .hero-text {
         text-align: center;
       }
+
       .hero-text p {
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
       }
+
       .hero-text h1 {
         font-size: 2.5rem;
       }
+
       .hero-icons {
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
       }
+
       .hero-icons i {
         font-size: 3.2rem;
         margin: 0 8px;
       }
     }
+
     @media (max-width: 480px) {
       .hero-text h1 {
         font-size: 1.9rem;
       }
+
       .hero-text p {
         font-size: 0.95rem;
       }
+
       .hero-btn {
         padding: 10px 24px;
         font-size: 0.85rem;
       }
+
       .hero-icons i {
         font-size: 2.5rem;
         margin: 0 5px;
@@ -269,11 +303,13 @@
       text-align: center;
       margin: 60px 0 35px;
     }
+
     .section-title h2 {
       font-size: 2rem;
       font-weight: 800;
       color: var(--black);
     }
+
     .section-title .red-bar {
       width: 60px;
       height: 3px;
@@ -289,38 +325,46 @@
       gap: 28px;
       margin-bottom: 30px;
     }
+
     .vehicle-card {
       background: var(--white);
       border-radius: 28px;
       overflow: hidden;
       transition: all 0.25s ease;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
       border: 1px solid var(--gray-border);
     }
+
     .vehicle-card:hover {
       transform: translateY(-5px);
       border-color: var(--red);
     }
+
     .vehicle-img {
       height: 200px;
       overflow: hidden;
     }
+
     .vehicle-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s;
     }
+
     .vehicle-card:hover .vehicle-img img {
       transform: scale(1.05);
     }
+
     .vehicle-info {
       padding: 18px 18px 22px;
     }
+
     .vehicle-name {
       font-size: 1.4rem;
       font-weight: 800;
     }
+
     .vehicle-tag {
       background: var(--red-soft);
       display: inline-block;
@@ -331,6 +375,7 @@
       color: var(--red-dark);
       margin: 8px 0;
     }
+
     .vehicle-features {
       display: flex;
       gap: 16px;
@@ -338,6 +383,7 @@
       color: #5a5a5a;
       font-size: 0.8rem;
     }
+
     .btn-rent-card {
       margin-top: 14px;
       width: 100%;
@@ -350,6 +396,7 @@
       cursor: pointer;
       transition: 0.2s;
     }
+
     .btn-rent-card:hover {
       background: var(--red);
       color: var(--white);
@@ -365,6 +412,7 @@
       text-align: center;
       border-left: 6px solid var(--red);
     }
+
     .bus-flex {
       display: flex;
       flex-wrap: wrap;
@@ -372,6 +420,7 @@
       gap: 25px;
       margin-top: 25px;
     }
+
     .bus-card-sm {
       background: #111111;
       border-radius: 28px;
@@ -379,6 +428,7 @@
       width: 240px;
       border: 1px solid #2e2e2e;
     }
+
     .bus-card-sm img {
       width: 100%;
       height: 130px;
@@ -386,11 +436,13 @@
       border-radius: 18px;
       margin-bottom: 12px;
     }
+
     .bus-card-sm h3 {
       color: var(--red);
       font-weight: 800;
       font-size: 1.2rem;
     }
+
     .bus-card-sm button {
       background: var(--red);
       border: none;
@@ -408,12 +460,14 @@
       background: #FCFCFD;
       padding: 50px 0;
     }
+
     .features-flex {
       display: flex;
       flex-wrap: wrap;
       gap: 25px;
       justify-content: center;
     }
+
     .feature-card {
       background: white;
       border-radius: 28px;
@@ -422,10 +476,12 @@
       flex: 1 1 180px;
       border-bottom: 3px solid var(--red);
     }
+
     .feature-card i {
       font-size: 2.3rem;
       color: var(--red);
     }
+
     .feature-card h4 {
       margin: 12px 0 6px;
       font-weight: 800;
@@ -436,12 +492,14 @@
     .services {
       padding: 40px 0 60px;
     }
+
     .services-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
       justify-content: center;
     }
+
     .service-item {
       background: white;
       border-radius: 28px;
@@ -450,6 +508,7 @@
       width: 210px;
       border: 1px solid #eee;
     }
+
     .service-item i {
       font-size: 2.2rem;
       background: var(--red-soft);
@@ -457,6 +516,7 @@
       border-radius: 50px;
       color: var(--red-dark);
     }
+
     .service-item h3 {
       margin: 14px 0 6px;
       font-weight: 800;
@@ -472,44 +532,51 @@
       border-bottom: 3px solid var(--red);
       scroll-margin-top: 80px;
     }
+
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
       justify-content: center;
     }
+
     .contact-info-card {
       flex: 1;
       min-width: 210px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(4px);
       border-radius: 32px;
       padding: 22px 16px;
       text-align: center;
-      border: 1px solid rgba(230,57,70,0.3);
+      border: 1px solid rgba(230, 57, 70, 0.3);
       transition: transform 0.2s;
     }
+
     .contact-info-card:hover {
       transform: translateY(-3px);
       border-color: var(--red);
     }
+
     .contact-info-card i {
       font-size: 2rem;
       color: var(--red);
       margin-bottom: 12px;
     }
+
     .contact-info-card h3 {
       font-size: 1.2rem;
       color: var(--white);
       margin-bottom: 8px;
       font-weight: 700;
     }
+
     .contact-info-card p {
       color: #ccc;
       font-size: 0.8rem;
       margin-bottom: 16px;
-      line-height: 1.4;
+      line-height: 1.5;
     }
+
     /* Compact, well-proportioned action buttons */
     .action-btn {
       background: transparent;
@@ -525,23 +592,27 @@
       align-items: center;
       gap: 5px;
     }
+
     .action-btn i {
       font-size: 0.65rem;
       margin: 0;
     }
+
     .action-btn:hover {
       background: var(--red);
       color: var(--white);
     }
+
     .contact-form-wrapper {
       flex: 1.2;
       min-width: 280px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(4px);
       border-radius: 32px;
       padding: 24px 22px;
-      border: 1px solid rgba(230,57,70,0.3);
+      border: 1px solid rgba(230, 57, 70, 0.3);
     }
+
     .contact-form-wrapper h3 {
       font-size: 1.3rem;
       color: var(--red);
@@ -549,16 +620,21 @@
       text-align: center;
       font-weight: 700;
     }
+
     .contact-form-wrapper p {
       text-align: center;
       color: #bbb;
       font-size: 0.8rem;
       margin-bottom: 20px;
     }
+
     .form-group {
       margin-bottom: 14px;
     }
-    .form-group input, .form-group select, .form-group textarea {
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
       width: 100%;
       padding: 10px 14px;
       border-radius: 40px;
@@ -568,10 +644,12 @@
       font-family: 'Inter', sans-serif;
       font-size: 0.85rem;
     }
+
     .form-group textarea {
       border-radius: 20px;
       resize: vertical;
     }
+
     .submit-btn {
       background: var(--red);
       color: white;
@@ -584,6 +662,7 @@
       width: 100%;
       transition: 0.2s;
     }
+
     .submit-btn:hover {
       background: var(--red-dark);
     }
@@ -595,17 +674,20 @@
       padding: 40px 0 20px;
       border-top: 3px solid var(--red);
     }
+
     .footer-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 25px;
     }
+
     .footer-logo {
       font-size: 1.5rem;
       font-weight: 800;
       color: var(--red);
     }
+
     .social i {
       font-size: 1.3rem;
       margin-right: 18px;
@@ -616,295 +698,340 @@
       .container {
         padding: 0 18px;
       }
+
       .contact-info-card {
         padding: 18px 12px;
         min-width: 170px;
       }
+
       .contact-info-card h3 {
         font-size: 1rem;
       }
+
       .action-btn {
         padding: 5px 10px;
         font-size: 0.65rem;
       }
+
       .contact-form-wrapper {
         padding: 20px 16px;
       }
+
       .section-title h2 {
         font-size: 1.7rem;
       }
     }
   </style>
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="container nav-flex">
-    <div class="logo">SHREEKRISHNA<span>TOURS&TRAVELS</span></div>
-    <button class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#gallery">Fleet</a></li>
-      <li><a href="#why-us">Why Us</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact-main">Contact</a></li>
-    </ul>
-    <button class="btn-book-nav" id="navBookBtn"><i class="fas fa-calendar-alt"></i> Book Now</button>
-  </div>
-</nav>
-
-<!-- Hero Section - Perfectly Aligned & Responsive -->
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <h1>Drive with <span class="red-accent">Power & Precision</span><br>Car & Bus Rental</h1>
-      <p>Premium fleet: Bush 52/18, Etinga 7 seater, Kia 7 seater, Swift 5, plus 52 & 18 seater buses. Commercial & private rentals with 24/7 support.</p>
-      <button class="hero-btn" id="heroExploreBtn"><i class="fas fa-arrow-right"></i> Explore Vehicles</button>
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">JSS <span>TOURS & TRAVELS</span></div>
+      <button class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Fleet</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact-main">Contact</a></li>
+      </ul>
+      <button class="btn-book-nav" id="navBookBtn"><i class="fas fa-calendar-alt"></i> Book Now</button>
     </div>
-    <div class="hero-icons">
-      <i class="fas fa-car-side"></i>
-      <i class="fas fa-bus"></i>
-      <i class="fas fa-truck"></i>
-      <i class="fas fa-caravan"></i>
-      <p><strong>50+ vehicles</strong> | Ready for any journey</p>
+  </nav>
+
+  <!-- Hero Section - Perfectly Aligned & Responsive -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Drive with <span class="red-accent">Power & Precision</span><br>Car & Bus Rental</h1>
+        <p>Premium fleet: Bush 52/18, Etinga 7 seater, Kia 7 seater, Swift 5, plus 52 & 18 seater buses. Commercial &
+          private rentals with 24/7 support.</p>
+        <button class="hero-btn" id="heroExploreBtn"><i class="fas fa-arrow-right"></i> Explore Vehicles</button>
+      </div>
+      <div class="hero-icons">
+        <i class="fas fa-car-side"></i>
+        <i class="fas fa-bus"></i>
+        <i class="fas fa-truck"></i>
+        <i class="fas fa-caravan"></i>
+        <p><strong>50+ vehicles</strong> | Ready for any journey</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Vehicle Gallery -->
-<div class="container" id="gallery">
-  <div class="section-title">
-    <h2>Our Elite Fleet</h2>
-    <div class="red-bar"></div>
-    <p>Choose your ride — from agile city cars to massive 52-seater coaches</p>
-  </div>
-  <div class="gallery-grid" id="vehicleGallery"></div>
-</div>
-
-<!-- Bus Special -->
-<div class="container">
-  <div class="bus-highlight">
-    <i class="fas fa-bus" style="font-size: 2.5rem; color: #E63946;"></i>
-    <h2 style="margin: 12px 0; color: #E63946; font-size: 1.5rem;">Commercial Bus Fleet</h2>
-    <p>Ideal for corporate shuttles, school trips, airport transfers & large groups.</p>
-    <div class="bus-flex" id="busSpecialContainer"></div>
-  </div>
-</div>
-
-<!-- Why Choose Us -->
-<section class="why-us" id="why-us">
-  <div class="container">
+  <!-- Vehicle Gallery -->
+  <div class="container" id="gallery">
     <div class="section-title">
-      <h2>Why Choose Shree Krishna Tours & Travels Rentals?</h2>
+      <h2>Our Elite Fleet</h2>
       <div class="red-bar"></div>
+      <p>Choose your ride — from agile city cars to massive 52-seater coaches</p>
     </div>
-    <div class="features-flex">
-      <div class="feature-card"><i class="fas fa-shield-alt"></i><h4>Fully Insured</h4><p>Commercial liability</p></div>
-      <div class="feature-card"><i class="fas fa-clock"></i><h4>24/7 Support</h4><p>Roadside assistance</p></div>
-      <div class="feature-card"><i class="fas fa-hand-holding-usd"></i><h4>Best Rates</h4><p>No hidden fees</p></div>
-      <div class="feature-card"><i class="fas fa-clipboard-list"></i><h4>Easy Booking</h4><p>Digital contracts</p></div>
-    </div>
+    <div class="gallery-grid" id="vehicleGallery"></div>
   </div>
-</section>
 
-<!-- Services -->
-<section class="services" id="services">
+  <!-- Bus Special -->
   <div class="container">
-    <div class="section-title">
-      <h2>Our Premium Services</h2>
-      <div class="red-bar"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-item"><i class="fas fa-building"></i><h3>Corporate Travel</h3><p>Executive sedans</p></div>
-      <div class="service-item"><i class="fas fa-plane-departure"></i><h3>Airport Transfer</h3><p>Meet & greet</p></div>
-      <div class="service-item"><i class="fas fa-church"></i><h3>Wedding & Events</h3><p>Chauffeur-driven</p></div>
-      <div class="service-item"><i class="fas fa-route"></i><h3>Long Distance</h3><p>Unlimited mileage</p></div>
-      <div class="service-item"><i class="fas fa-users"></i><h3>Group Tours</h3><p>52-seater coaches</p></div>
+    <div class="bus-highlight">
+      <i class="fas fa-bus" style="font-size: 2.5rem; color: #E63946;"></i>
+      <h2 style="margin: 12px 0; color: #E63946; font-size: 1.5rem;">Commercial Bus Fleet</h2>
+      <p>Ideal for corporate shuttles, school trips, airport transfers & large groups.</p>
+      <div class="bus-flex" id="busSpecialContainer"></div>
     </div>
   </div>
-</section>
 
-<!-- Contact Section - Compact & Actionable Buttons -->
-<section class="contact-main-section" id="contact-main">
-  <div class="container">
-    <div class="section-title">
-      <h2 style="color: white;">Get In Touch</h2>
-      <div class="red-bar"></div>
-      <p style="color: #ccc;">Reach out anytime — we're here to help you hit the road</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info-card">
-        <i class="fas fa-phone-alt"></i>
-        <h3>Call Us</h3>
-        <p>+91 62 842 10698<br>Available 24/7</p>
-        <button class="action-btn" id="callNowBtn"><i class="fas fa-phone"></i> Call Now</button>
+  <!-- Why Choose Us -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose JSS Tours & Travels Rentals?</h2>
+        <div class="red-bar"></div>
       </div>
-      <div class="contact-info-card">
-        <i class="fas fa-envelope"></i>
-        <h3>Email Us</h3>
-        <p>support@redlinerental.com<br>sales@redlinerental.com</p>
-        <button class="action-btn" id="emailNowBtn"><i class="fas fa-paper-plane"></i> Send Email</button>
-      </div>
-      <div class="contact-info-card">
-        <i class="fas fa-map-marker-alt"></i>
-        <h3>Our Location</h3>
-        <p>Sardarshahar, Churu, Rajasthan, India</p>
-        <button class="action-btn" id="directionsBtn"><i class="fas fa-directions"></i> Directions</button>
-      </div>
-      <div class="contact-form-wrapper">
-        <h3><i class="fas fa-car"></i> Quick Rental Inquiry</h3>
-        <p>Fill the form & we'll reply within 30 min</p>
-        <form id="bookingForm">
-          <div class="form-group">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" id="email" placeholder="Email Address" required>
-          </div>
-          <div class="form-group">
-            <input type="tel" id="phone" placeholder="Phone Number" required>
-          </div>
-          <div class="form-group">
-            <select id="vehicleInterest">
-              <option value="">Select Vehicle</option>
-              <option>Bush 52/18 Luxury Coach</option>
-              <option>Etinga 7 Seater</option>
-              <option>Kia 7 Seater</option>
-              <option>Swift 5</option>
-              <option>Bus 52 Seater</option>
-              <option>Bus 18 Seater</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea rows="2" placeholder="Travel dates, pickup location..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Inquiry <i class="fas fa-arrow-right"></i></button>
-        </form>
+      <div class="features-flex">
+        <div class="feature-card"><i class="fas fa-shield-alt"></i>
+          <h4>Fully Insured</h4>
+          <p>Commercial liability</p>
+        </div>
+        <div class="feature-card"><i class="fas fa-clock"></i>
+          <h4>24/7 Support</h4>
+          <p>Roadside assistance</p>
+        </div>
+        <div class="feature-card"><i class="fas fa-hand-holding-usd"></i>
+          <h4>Best Rates</h4>
+          <p>No hidden fees</p>
+        </div>
+        <div class="feature-card"><i class="fas fa-clipboard-list"></i>
+          <h4>Easy Booking</h4>
+          <p>Digital contracts</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div><div class="footer-logo">REDLINE</div><p style="margin-top: 6px; font-size: 0.8rem;">Black, White & Red — bold mobility.</p></div>
-      <div><h4 style="color: #E63946; font-size: 1rem;">Contact</h4><p style="font-size: 0.8rem;"><i class="fas fa-map-pin"></i> 500 Commerce Ave, LA</p><p style="font-size: 0.8rem;"><i class="fas fa-phone-alt"></i> +1 (888) 557-8840</p></div>
-      <div class="social"><h4 style="color: #E63946; font-size: 1rem;">Connect</h4><i class="fab fa-instagram"></i><i class="fab fa-facebook-f"></i><i class="fab fa-x-twitter"></i></div>
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Premium Services</h2>
+        <div class="red-bar"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-item"><i class="fas fa-building"></i>
+          <h3>Corporate Travel</h3>
+          <p>Executive sedans</p>
+        </div>
+        <div class="service-item"><i class="fas fa-plane-departure"></i>
+          <h3>Airport Transfer</h3>
+          <p>Meet & greet</p>
+        </div>
+        <div class="service-item"><i class="fas fa-church"></i>
+          <h3>Wedding & Events</h3>
+          <p>Chauffeur-driven</p>
+        </div>
+        <div class="service-item"><i class="fas fa-route"></i>
+          <h3>Long Distance</h3>
+          <p>Unlimited mileage</p>
+        </div>
+        <div class="service-item"><i class="fas fa-users"></i>
+          <h3>Group Tours</h3>
+          <p>52-seater coaches</p>
+        </div>
+      </div>
     </div>
-    <hr style="margin: 25px 0 15px; border-color: #2c2c2c;">
-    <p style="text-align: center; font-size: 0.75rem;">&copy; 2025 RedLine Rentals – All rights reserved.</p>
-  </div>
-</footer>
+  </section>
 
-<script>
-  // Fleet Data
-  const fleet = [
-    { name: "Bush 52/18", seats: "52 seats + 18 luggage", tag: "Premium Bus", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop" },
-    { name: "Etinga 7 Seater", seats: "7 seats", tag: "Spacious", image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&h=400&fit=crop" },
-    { name: "Kia 7 Seater", seats: "7 seats", tag: "Luxury", image: "https://images.unsplash.com/photo-1674027444485-cebea3af2c31?w=600&h=400&fit=crop" },
-    { name: "Swift 5", seats: "5 seats", tag: "Economy", image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop" },
-    { name: "Bus 52 Seater", seats: "52 passengers", tag: "Group Travel", image: "https://images.unsplash.com/photo-1570125909232-263c9fa6ea9a?w=600&h=400&fit=crop" },
-    { name: "Bus 18 Seater", seats: "18 seats", tag: "Shuttle", image: "https://images.unsplash.com/photo-1566737236502-bc8f37b2b824?w=600&h=400&fit=crop" }
-  ];
-  const busSpecials = [
-    { name: "Bush 52/18", desc: "52 seats + 18 luggage", model: "Bush 52/18 Luxury Coach", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=250&fit=crop" },
-    { name: "Bus 52 Seater", desc: "Premium Coach", model: "Bus 52 Seater", image: "https://images.unsplash.com/photo-1570125909232-263c9fa6ea9a?w=400&h=250&fit=crop" },
-    { name: "Bus 18 Seater", desc: "Minibus", model: "Bus 18 Seater", image: "https://images.unsplash.com/photo-1566737236502-bc8f37b2b824?w=400&h=250&fit=crop" }
-  ];
+  <!-- Contact Section - Compact & Actionable Buttons -->
+  <section class="contact-main-section" id="contact-main">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color: white;">Get In Touch</h2>
+        <div class="red-bar"></div>
+        <p style="color: #ccc;">Reach out anytime — we're here to help you hit the road</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Call Us</h3>
+          <p>+91 62 842 10698<br>Available 24/7</p>
+          <button class="action-btn" id="callNowBtn"><i class="fas fa-phone"></i> Call Now</button>
+        </div>
+        <div class="contact-info-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>support@redlinerental.com<br>sales@redlinerental.com</p>
+          <button class="action-btn" id="emailNowBtn"><i class="fas fa-paper-plane"></i> Send Email</button>
+        </div>
+        <div class="contact-info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Our Location</h3>
+          <p>Sardarshahar, Churu, Rajasthan, India</p>
+          <button class="action-btn" id="directionsBtn"><i class="fas fa-directions"></i> Directions</button>
+        </div>
+        <div class="contact-form-wrapper">
+          <h3><i class="fas fa-car"></i> Quick Rental Inquiry</h3>
+          <p>Fill the form & we'll reply within 30 min</p>
+          <form id="bookingForm">
+            <div class="form-group">
+              <input type="text" id="fullName" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <select id="vehicleInterest">
+                <option value="">Select Vehicle</option>
+                <option>Bush 52/18 Luxury Coach</option>
+                <option>Etinga 7 Seater</option>
+                <option>Kia 7 Seater</option>
+                <option>Swift 5</option>
+                <option>Bus 52 Seater</option>
+                <option>Bus 18 Seater</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea rows="2" placeholder="Travel dates, pickup location..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Inquiry <i class="fas fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  function renderGallery() {
-    const gallery = document.getElementById('vehicleGallery');
-    if (!gallery) return;
-    gallery.innerHTML = '';
-    fleet.forEach(v => {
-      const card = document.createElement('div');
-      card.className = 'vehicle-card';
-      card.innerHTML = `<div class="vehicle-img"><img src="${v.image}" alt="${v.name}" loading="lazy"></div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">JSS TOURS & TRAVELS</div>
+          <p style="margin-top: 6px; font-size: 0.8rem;">Drive with Power & Precision Car & Bus Rental.</p>
+        </div>
+        <div>
+          <h4 style="color: #E63946; font-size: 1rem;">Contact</h4>
+          <p style="font-size: 0.8rem;"><i class="fas fa-map-pin"></i>Sardarshahar, Churu, Rajasthan, India</p>
+          <p style="font-size: 0.8rem;"><i class="fas fa-phone-alt"></i> 91 62 842 10698</p>
+        </div>
+        <div class="social">
+          <h4 style="color: #E63946; font-size: 1rem;">Connect</h4><i class="fab fa-instagram"></i><i
+            class="fab fa-facebook-f"></i><i class="fab fa-x-twitter"></i>
+        </div>
+      </div>
+      <hr style="margin: 25px 0 15px; border-color: #2c2c2c;">
+      <p style="text-align: center; font-size: 0.75rem;">&copy; 2026 JSS TOURS & TRAVELS – All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fleet Data
+    const fleet = [
+      { name: "Bush 52/18", seats: "52 seats + 18 luggage", tag: "Premium Bus", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop" },
+      { name: "Etinga 7 Seater", seats: "7 seats", tag: "Spacious", image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&h=400&fit=crop" },
+      { name: "Kia 7 Seater", seats: "7 seats", tag: "Luxury", image: "https://images.unsplash.com/photo-1674027444485-cebea3af2c31?w=600&h=400&fit=crop" },
+      { name: "Swift 5", seats: "5 seats", tag: "Economy", image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop" },
+      { name: "Bus 52 Seater", seats: "52 passengers", tag: "Group Travel", image: "https://images.unsplash.com/photo-1570125909232-263c9fa6ea9a?w=600&h=400&fit=crop" },
+      { name: "Bus 18 Seater", seats: "18 seats", tag: "Shuttle", image: "https://images.unsplash.com/photo-1566737236502-bc8f37b2b824?w=600&h=400&fit=crop" }
+    ];
+    const busSpecials = [
+      { name: "Bush 52/18", desc: "52 seats + 18 luggage", model: "Bush 52/18 Luxury Coach", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=250&fit=crop" },
+      { name: "Bus 52 Seater", desc: "Premium Coach", model: "Bus 52 Seater", image: "https://images.unsplash.com/photo-1570125909232-263c9fa6ea9a?w=400&h=250&fit=crop" },
+      { name: "Bus 18 Seater", desc: "Minibus", model: "Bus 18 Seater", image: "https://images.unsplash.com/photo-1566737236502-bc8f37b2b824?w=400&h=250&fit=crop" }
+    ];
+
+    function renderGallery() {
+      const gallery = document.getElementById('vehicleGallery');
+      if (!gallery) return;
+      gallery.innerHTML = '';
+      fleet.forEach(v => {
+        const card = document.createElement('div');
+        card.className = 'vehicle-card';
+        card.innerHTML = `<div class="vehicle-img"><img src="${v.image}" alt="${v.name}" loading="lazy"></div>
         <div class="vehicle-info"><div class="vehicle-name">${v.name}</div><div class="vehicle-tag">${v.tag}</div>
         <div class="vehicle-features"><span><i class="fas fa-users"></i> ${v.seats}</span></div>
         <button class="btn-rent-card rentBtn" data-model="${v.name}">Rent Now →</button></div>`;
-      gallery.appendChild(card);
-    });
-    document.querySelectorAll('.rentBtn').forEach(btn => btn.addEventListener('click', () => scrollToContact(btn.getAttribute('data-model'))));
-  }
+        gallery.appendChild(card);
+      });
+      document.querySelectorAll('.rentBtn').forEach(btn => btn.addEventListener('click', () => scrollToContact(btn.getAttribute('data-model'))));
+    }
 
-  function renderBusSpecialsFn() {
-    const container = document.getElementById('busSpecialContainer');
-    if (!container) return;
-    container.innerHTML = '';
-    busSpecials.forEach(b => {
-      const div = document.createElement('div');
-      div.className = 'bus-card-sm';
-      div.innerHTML = `<img src="${b.image}" alt="${b.name}"><h3>${b.name}</h3><p>${b.desc}</p><button class="busBookBtn" data-model="${b.model}">Inquire Now</button>`;
-      container.appendChild(div);
-    });
-    document.querySelectorAll('.busBookBtn').forEach(btn => btn.addEventListener('click', () => scrollToContact(btn.getAttribute('data-model'))));
-  }
+    function renderBusSpecialsFn() {
+      const container = document.getElementById('busSpecialContainer');
+      if (!container) return;
+      container.innerHTML = '';
+      busSpecials.forEach(b => {
+        const div = document.createElement('div');
+        div.className = 'bus-card-sm';
+        div.innerHTML = `<img src="${b.image}" alt="${b.name}"><h3>${b.name}</h3><p>${b.desc}</p><button class="busBookBtn" data-model="${b.model}">Inquire Now</button>`;
+        container.appendChild(div);
+      });
+      document.querySelectorAll('.busBookBtn').forEach(btn => btn.addEventListener('click', () => scrollToContact(btn.getAttribute('data-model'))));
+    }
 
-  function scrollToContact(vehicleModel) {
-    const contactSection = document.getElementById('contact-main');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => {
-        const select = document.getElementById('vehicleInterest');
-        if (select && vehicleModel) {
-          for (let i = 0; i < select.options.length; i++) {
-            if (vehicleModel.includes(select.options[i].text) || 
+    function scrollToContact(vehicleModel) {
+      const contactSection = document.getElementById('contact-main');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+          const select = document.getElementById('vehicleInterest');
+          if (select && vehicleModel) {
+            for (let i = 0; i < select.options.length; i++) {
+              if (vehicleModel.includes(select.options[i].text) ||
                 (vehicleModel.includes("Bush") && select.options[i].text.includes("Bush")) ||
                 (vehicleModel.includes("Etinga") && select.options[i].text.includes("Etinga")) ||
                 (vehicleModel.includes("Kia") && select.options[i].text.includes("Kia")) ||
                 (vehicleModel.includes("Swift") && select.options[i].text.includes("Swift")) ||
                 (vehicleModel.includes("Bus 52") && select.options[i].text.includes("Bus 52")) ||
                 (vehicleModel.includes("Bus 18") && select.options[i].text.includes("Bus 18"))) {
-              select.selectedIndex = i;
-              break;
+                select.selectedIndex = i;
+                break;
+              }
             }
           }
-        }
-      }, 300);
-    }
-  }
-
-  // Action Buttons
-  document.getElementById('callNowBtn')?.addEventListener('click', () => window.location.href = 'tel:+18885578840');
-  document.getElementById('emailNowBtn')?.addEventListener('click', () => window.location.href = 'mailto:support@redlinerental.com?subject=Rental%20Inquiry');
-  document.getElementById('directionsBtn')?.addEventListener('click', () => window.open('https://maps.google.com/?q=500+Commerce+Avenue+Los+Angeles+CA', '_blank'));
-  document.getElementById('navBookBtn')?.addEventListener('click', () => scrollToContact(''));
-  document.getElementById('heroExploreBtn')?.addEventListener('click', () => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }));
-
-  // Form submission
-  document.getElementById('bookingForm')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('fullName')?.value;
-    if (!name) { alert('Please enter your name.'); return; }
-    alert(`✅ Thank you ${name}! Your rental inquiry has been received. Our team will contact you shortly.`);
-    e.target.reset();
-  });
-
-  // Mobile menu toggle
-  const hamburger = document.getElementById('hamburgerBtn');
-  const navLinks = document.getElementById('navLinks');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
-    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
-  }
-
-  // Smooth navigation
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const targetId = link.getAttribute('href').substring(1);
-      if (targetId === 'home') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-      else if (['gallery', 'why-us', 'services', 'contact-main'].includes(targetId)) {
-        e.preventDefault();
-        const el = document.getElementById(targetId);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
       }
-    });
-  });
+    }
 
-  renderGallery();
-  renderBusSpecialsFn();
-</script>
+    // Action Buttons
+    document.getElementById('callNowBtn')?.addEventListener('click', () => window.location.href = 'tel:+18885578840');
+    document.getElementById('emailNowBtn')?.addEventListener('click', () => window.location.href = 'mailto:support@redlinerental.com?subject=Rental%20Inquiry');
+    document.getElementById('directionsBtn')?.addEventListener('click', () => window.open('https://maps.google.com/?q=500+Commerce+Avenue+Los+Angeles+CA', '_blank'));
+    document.getElementById('navBookBtn')?.addEventListener('click', () => scrollToContact(''));
+    document.getElementById('heroExploreBtn')?.addEventListener('click', () => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }));
+
+    // Form submission
+    document.getElementById('bookingForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('fullName')?.value;
+      if (!name) { alert('Please enter your name.'); return; }
+      alert(`✅ Thank you ${name}! Your rental inquiry has been received. Our team will contact you shortly.`);
+      e.target.reset();
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+      document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+    }
+
+    // Smooth navigation
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href').substring(1);
+        if (targetId === 'home') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        else if (['gallery', 'why-us', 'services', 'contact-main'].includes(targetId)) {
+          e.preventDefault();
+          const el = document.getElementById(targetId);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    renderGallery();
+    renderBusSpecialsFn();
+  </script>
 </body>
+
 </html>
