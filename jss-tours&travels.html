@@ -683,7 +683,7 @@
     }
 
     .footer-logo {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 800;
       color: var(--red);
     }
@@ -746,7 +746,7 @@
     <div class="container hero-grid">
       <div class="hero-text">
         <h1>Drive with <span class="red-accent">Power & Precision</span><br>Car & Bus Rental</h1>
-        <p>Premium fleet: Bush 52/18, Etinga 7 seater, Kia 7 seater, Swift 5, plus 52 & 18 seater buses. Commercial &
+        <p>Premium fleet: Buses 52/18, Ertiga 7 seater, Kia 7 seater, Swift 5, plus 52 & 18 seater buses. Commercial &
           private rentals with 24/7 support.</p>
         <button class="hero-btn" id="heroExploreBtn"><i class="fas fa-arrow-right"></i> Explore Vehicles</button>
       </div>
@@ -858,7 +858,7 @@
         <div class="contact-info-card">
           <i class="fas fa-envelope"></i>
           <h3>Email Us</h3>
-          <p>support@redlinerental.com<br>sales@redlinerental.com</p>
+          <p> sureshprajapati7073@gmail.com</p>
           <button class="action-btn" id="emailNowBtn"><i class="fas fa-paper-plane"></i> Send Email</button>
         </div>
         <div class="contact-info-card">
@@ -883,8 +883,8 @@
             <div class="form-group">
               <select id="vehicleInterest">
                 <option value="">Select Vehicle</option>
-                <option>Bush 52/18 Luxury Coach</option>
-                <option>Etinga 7 Seater</option>
+                <option>Bus 52/18 Luxury Coach</option>
+                <option>Ertiga 7 Seater</option>
                 <option>Kia 7 Seater</option>
                 <option>Swift 5</option>
                 <option>Bus 52 Seater</option>
@@ -927,16 +927,16 @@
     // Fleet Data
     const fleet = [
       // { name: "Bush 52/18", seats: "52 seats + 18 luggage", tag: "Premium Bus", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=250&fit=crop" },
-      { name: "Etinga 7 Seater", seats: "7 seats", tag: "Spacious", image: "./assets/img/ertiga.jpg" },
+      { name: "Ertiga 7 Seater", seats: "7 seats", tag: "Spacious", image: "./assets/img/ertiga.jpg" },
       { name: "Kia 7 Seater", seats: "7 seats", tag: "Luxury", image: "./assets/img/kia.jpg" },
       { name: "Swift 5", seats: "5 seats", tag: "Economy", image: "./assets/img/swift.jpg" },
       { name: "Bus 52 Seater", seats: "52 passengers", tag: "Group Travel", image: "./assets/img/bus52.jpg" },
       { name: "Bus 18 Seater", seats: "18 seats", tag: "Shuttle", image: "./assets/img/bus18.jpg" }
     ];
     const busSpecials = [
-      { name: "Bush 52/18", desc: "52 seats + 18 luggage", model: "Bush 52/18 Luxury Coach", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=250&fit=crop" },
+      { name: "Bus 52/18", desc: "52 seats + 18 luggage", model: "Bus 52/18 Luxury Coach", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=250&fit=crop" },
       { name: "Bus 52 Seater", desc: "Premium Coach", model: "Bus 52 Seater", image: "./assets/img/bus52.jpg" },
-      { name: "Bus 18 Seater", desc: "Minibus", model: "Bus 18 Seater", image: "./assets/img/bus18.jpg" }
+      { name: "Bus 18 Seater", desc: "Mini Bus", model: "Bus 18 Seater", image: "./assets/img/bus18.jpg" }
     ];
 
     function renderGallery() {
@@ -977,8 +977,8 @@
           if (select && vehicleModel) {
             for (let i = 0; i < select.options.length; i++) {
               if (vehicleModel.includes(select.options[i].text) ||
-                (vehicleModel.includes("Bush") && select.options[i].text.includes("Bush")) ||
-                (vehicleModel.includes("Etinga") && select.options[i].text.includes("Etinga")) ||
+                (vehicleModel.includes("Bus") && select.options[i].text.includes("Bus")) ||
+                (vehicleModel.includes("Ertiga") && select.options[i].text.includes("Ertiga")) ||
                 (vehicleModel.includes("Kia") && select.options[i].text.includes("Kia")) ||
                 (vehicleModel.includes("Swift") && select.options[i].text.includes("Swift")) ||
                 (vehicleModel.includes("Bus 52") && select.options[i].text.includes("Bus 52")) ||
@@ -993,9 +993,9 @@
     }
 
     // Action Buttons
-    document.getElementById('callNowBtn')?.addEventListener('click', () => window.location.href = 'tel:+18885578840');
-    document.getElementById('emailNowBtn')?.addEventListener('click', () => window.location.href = 'mailto:support@redlinerental.com?subject=Rental%20Inquiry');
-    document.getElementById('directionsBtn')?.addEventListener('click', () => window.open('https://maps.google.com/?q=500+Commerce+Avenue+Los+Angeles+CA', '_blank'));
+    document.getElementById('callNowBtn')?.addEventListener('click', () => window.location.href = 'tel:‪+917300300245‬');
+    document.getElementById('emailNowBtn')?.addEventListener('click', () => window.location.href = 'mailto:s sureshprajapati7073@gmail.com?subject=Rental%20Inquiry');
+    document.getElementById('directionsBtn')?.addEventListener('click', () => window.open('https://maps.google.com/?q=Sardarshahar+Churu+Rajasthan', '_blank'));
     document.getElementById('navBookBtn')?.addEventListener('click', () => scrollToContact(''));
     document.getElementById('heroExploreBtn')?.addEventListener('click', () => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }));
 
